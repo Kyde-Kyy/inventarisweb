@@ -3,26 +3,26 @@ import {
 } from "@chakra-ui/react";
 import '../css/login.css'
 
-// import Logo from "../assets/icons/logo.png";
+import Logo from "../assets/icons/logo.png";
 
 const Login = () => {
     return (
         <>
-            <Box class="Body">
-                <CardRoot>
+            <Box className="LoginBody">
+                <CardRoot className="LoginCardRoot">
                     <CardHeader>
                         <CardTitle>
                             <Center>
-                                <Image/>
+                                <Image src={Logo} width="100px"/>
                             </Center>
                             <Text>My Inventory</Text>
                         </CardTitle>
                     </CardHeader>
-                    <CardBody>
-                        <Input/>
-                        <Input/>
-                        <Button>
-                            <Text></Text>
+                    <CardBody className="LoginBodyCard">
+                        <Input placeholder="Username" type="text" />
+                        <Input placeholder="Password" type="password"/>
+                        <Button className="ButtonLogin">
+                            <Text>LOGIN</Text>
                         </Button>
                     </CardBody>
                 </CardRoot>
