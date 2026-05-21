@@ -25,7 +25,7 @@ const Login = () => {
         const body = {username: username, password:password};
         try {
             const response = await axios.post(url, body);
-            if (response.data.STATUS == "BERHASIL") {
+            if (response.data.STATUS === "BERHASIL") {
                 localStorage.setItem("usernameLS", response.data.DATA[0]["username"]);
                 localStorage.setItem("namaLS", response.data.DATA[0]["nama"]);
                 TampilPesan("Info", "Selamat Datang");
